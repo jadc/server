@@ -12,4 +12,4 @@ services:
             - PGID=1000
         volumes:
             - ./config:/config
-            - SYNC:/sync
+            - /data/sync:/sync

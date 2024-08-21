@@ -11,7 +11,7 @@ services:
             - PGID=1000
         volumes:
             - ./config:/config
-            - MEDIA:/media
+            - /data/media:/media
         depends_on:
             - sonarr
             - radarr
