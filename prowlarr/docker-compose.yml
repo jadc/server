@@ -1,0 +1,13 @@
+services:
+    prowlarr:
+        image: lscr.io/linuxserver/prowlarr:latest
+        restart: unless-stopped
+        ports:
+            - 9696:9696
+        networks:
+            - mediarr
+        environment:
+            - PUID=1000
+            - PGID=1000
+        volumes:
+            - ./config:/config

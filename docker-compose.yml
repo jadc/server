@@ -1,0 +1,23 @@
+networks:
+    mediarr: {}
+volumes:
+    MEDIA:
+        driver: local
+        driver_opts:
+            type: none
+            o: none
+            device: /data/media
+    DOWNLOADS:
+        driver: local
+        driver_opts:
+            type: none
+            o: none
+            device: /data/downloads
+    SYNC:
+        driver: local
+        driver_opts:
+            type: none
+            o: none
+            device: /data/sync
+include:
+    - path: "qbittorrent/docker-compose.yml"

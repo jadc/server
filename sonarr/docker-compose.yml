@@ -1,0 +1,19 @@
+services:
+    sonarr:
+        image: lscr.io/linuxserver/sonarr:latest
+        restart: unless-stopped
+        ports:
+            - 8989:8989
+        networks:
+            - mediarr
+        environment:
+            - PUID=1000
+            - PGID=1000
+        volumes:
+            - ./config:/config
+            - MEDIA:/media
+            - DOWNLOADS:/downloads
+        depends_on:
+            - qbittorrent
+            - prowlarr
+            - jellyfin

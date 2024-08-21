@@ -1,0 +1,17 @@
+services:
+    bazarr:
+        image: lscr.io/linuxserver/bazarr:latest
+        restart: unless-stopped
+        ports:
+            - 8989:8989
+        networks:
+            - mediarr
+        environment:
+            - PUID=1000
+            - PGID=1000
+        volumes:
+            - ./config:/config
+            - MEDIA:/media
+        depends_on:
+            - sonarr
+            - radarr
