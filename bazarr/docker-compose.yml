@@ -3,7 +3,7 @@ services:
         image: lscr.io/linuxserver/bazarr:latest
         restart: unless-stopped
         ports:
-            - 8989:8989
+            - 6767:6767
         networks:
             - mediarr
         environment:
