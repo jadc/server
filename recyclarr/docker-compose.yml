@@ -2,11 +2,11 @@ services:
     recyclarr:
         image: ghcr.io/recyclarr/recyclarr
         restart: unless-stopped
+        read_only: true
+        tmpfs: /tmp
+        security_opt: ["no-new-privileges:true"]
         networks:
             - mediarr
-        environment:
-            - PUID=1000
-            - PGID=1000
         volumes:
             - ./config:/config
         depends_on:
