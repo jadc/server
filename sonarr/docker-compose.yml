@@ -11,8 +11,7 @@ services:
             - PGID=1000
         volumes:
             - ./config:/config
-            - /data/media:/media
-            - /data/downloads:/downloads
+            - /data/media:/data
         depends_on:
             - qbittorrent
             - prowlarr

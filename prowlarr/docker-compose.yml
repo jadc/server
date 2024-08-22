@@ -11,8 +11,8 @@ services:
             - PGID=1000
         volumes:
             - ./config:/config
-        depends_on: 
-          - flaresolverr 
+        depends_on:
+          - flaresolverr
     flaresolverr:
         image: ghcr.io/flaresolverr/flaresolverr:latest
         restart: unless-stopped
@@ -23,6 +23,6 @@ services:
         environment:
             - PUID=1000
             - PGID=1000
-            - LOG_LEVEL=${LOG_LEVEL:-info} 
-            - LOG_HTML=${LOG_HTML:-false} 
-            - CAPTCHA_SOLVER=${CAPTCHA_SOLVER:-none} 
+            - LOG_LEVEL=${LOG_LEVEL:-info}
+            - LOG_HTML=${LOG_HTML:-false}
+            - CAPTCHA_SOLVER=${CAPTCHA_SOLVER:-none}
