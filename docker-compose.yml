@@ -6,5 +6,6 @@ include:
     - path: "prowlarr/docker-compose.yml"
     - path: "qbittorrent/docker-compose.yml"
     - path: "radarr/docker-compose.yml"
+    - path: "recyclarr/docker-compose.yml"
     - path: "sonarr/docker-compose.yml"
     - path: "syncthing/docker-compose.yml"
