@@ -9,6 +9,8 @@ services:
             - mediarr
         volumes:
             - ./config:/config
+        environment:
+            - RECYCLARR_CREATE_CONFIG=true
         depends_on:
             - sonarr
             - radarr
