@@ -14,4 +14,4 @@ services:
             - WEBUI_PORT=8080
         volumes:
             - ./config:/config
-            - /data/media/downloads:/downloads
+            - /data/media/downloads:/data/media/downloads
