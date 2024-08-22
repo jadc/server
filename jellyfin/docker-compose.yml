@@ -14,4 +14,4 @@ services:
             - PGID=1000
         volumes:
             - ./config:/config
-            - /data/media:/media
+            - /data:/data
