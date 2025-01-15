@@ -1,0 +1,12 @@
+services:
+    suwayomi:
+        image: ghcr.io/suwayomi/tachidesk:preview
+        restart: unless-stopped
+        ports:
+            - 4567:4567
+        environment:
+            - TZ=Etc/UTC
+            - PUID=1000
+            - PGID=1000
+        volumes:
+            - /data/media/manga:/home/suwayomi/.local/share/Tachidesk
