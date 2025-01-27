@@ -9,4 +9,3 @@ include:
     - path: "recyclarr/docker-compose.yml"
     - path: "sonarr/docker-compose.yml"
     - path: "syncthing/docker-compose.yml"
-    - path: "suwayomi/docker-compose.yml"
