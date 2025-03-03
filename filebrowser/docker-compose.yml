@@ -4,7 +4,7 @@ services:
         restart: unless-stopped
         user: 1000:1000
         ports:
-            - "9998:9998"
+            - "8888:8888"
         environment:
             - PUID=1000
             - PGID=1000
