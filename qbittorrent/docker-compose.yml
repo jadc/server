@@ -1,11 +1,12 @@
 services:
     qbittorrent:
         image: lscr.io/linuxserver/qbittorrent:latest
+        container_name: qbittorrent
         restart: unless-stopped
         ports:
-            - 8080:8080
-            - 6881:6881
-            - 6881:6881/udp
+            - "8080:8080"
+            - "6881:6881"
+            - "6881:6881/udp"
         networks:
             - mediarr
         environment:

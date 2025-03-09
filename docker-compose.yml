@@ -1,13 +1,13 @@
 networks:
-    mediarr: {}
+    mediarr:
+        driver: bridge
 include:
-    - path: "bazarr/docker-compose.yml"
+    - path: "caddy/docker-compose.yml"
+    - path: "filebrowser/docker-compose.yml"
     - path: "jellyfin/docker-compose.yml"
     - path: "prowlarr/docker-compose.yml"
     - path: "qbittorrent/docker-compose.yml"
     - path: "radarr/docker-compose.yml"
-    - path: "recyclarr/docker-compose.yml"
     - path: "sonarr/docker-compose.yml"
-    - path: "syncthing/docker-compose.yml"
     - path: "stash/docker-compose.yml"
-    - path: "filebrowser/docker-compose.yml"
+    - path: "syncthing/docker-compose.yml"

@@ -1,0 +1,19 @@
+services:
+    caddy:
+        image: caddy:latest
+        container_name: caddy
+        restart: unless-stopped
+        ports:
+            - "80:80"
+            - "443:443"
+            - "443:443/udp"
+        networks:
+            - mediarr
+        environment:
+            - PUID=1000
+            - PGID=1000
+        volumes:
+            - ./config/Caddyfile:/etc/caddy/Caddyfile
+            - ./config/data:/data
+            - ./config/config:/config
+            - /var/lib/caddy:/keys
