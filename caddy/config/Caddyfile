@@ -1,0 +1,4 @@
+media.jad.red {
+	reverse_proxy jellyfin:8096
+	tls /keys/cert.pem /keys/private.pem
+}
